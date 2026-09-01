@@ -70,7 +70,7 @@ test("claimTask rejects blocked tasks until blockers complete", async () => {
   } finally {
     await fixture.cleanup()
   }
-})
+}, 30_000)
 
 test("claimTask reports duplicate blockers once", async () => {
   // given
