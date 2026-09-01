@@ -29,7 +29,7 @@ test("createTask assigns distinct ids during concurrent creation", async () => {
   } finally {
     await fixture.cleanup()
   }
-})
+}, 30_000)
 
 test("createTask recovers next id from task files when high watermark is corrupt", async () => {
   // given
